@@ -48,5 +48,6 @@ loveTpl.html
 [点击下载稳定版本](https://github.com/maicong/music/releases) 并解压到网站目录，通过 `http://你的域名/指定目录` 进行访问，如果放在根目录，直接访问绑定域名就行。
 
 ```
-注：这是一个自动生成表白页面的程序，模版由 `jianghongfei.com.cn` 原创，`麦葱(www.yuxiaoxi.com)` 做二次开发，仅限娱乐，不得用于商业用途！
+注：这是一个自动生成表白页面的程序，模版由 jianghongfei.com.cn 原创
+麦葱(www.yuxiaoxi.com) 做二次开发，仅限娱乐，不得用于商业用途！
 ```
