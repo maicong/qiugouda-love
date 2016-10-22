@@ -1,4 +1,10 @@
-<!DOCTYPE HTML>
+<?php
+if (isset($_SERVER['HTTPS']) || '443' === $_SERVER['SERVER_PORT']) {
+    $url = 'https://';
+} else {
+    $url = 'http://';
+}
+?><!DOCTYPE HTML>
 <!--[if IE 6]>
 <html id="ie6" class="ie ie6 lt-ie9">
 <![endif]-->
@@ -19,11 +25,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="author" content="情人节,表白程序,情人节表白程序,自动生成表白程序,自动表白程序">
-	<meta name="description" content="这是一个自动生成表白页面的程序，模版由jianghongfei.com.cn原创，麦葱(www.yuxiaoxi.com)做二次开发，仅限娱乐，不得用于商业用途">
+	<meta name="description" content="这是一个自动生成表白页面的程序，模版由 jianghongfei.com.cn 原创，麦葱(maicong.me)做二次开发，仅限娱乐，不得用于商业用途">
 	<title>情人节自动生成表白程序</title>
-	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/all.css">
 </head>
 <body>
+	<div id="nojavascript" class="nojavascript">您的浏览器版本太低或禁用了javascript，无法正常浏览本页面</div>
+	<script>document.getElementById('nojavascript').remove();</script>
+
 	<div class="flowtime">
 		<div class="ft-section section-1" data-id="section-1">
 			<div id="/section-1/page-1" class="ft-page page-1" data-id="page-1">
@@ -125,7 +134,7 @@
 				<h3 id="text-25" contenteditable="true">然后两个人一起出去玩</h3>
 				<img src='img/iali44.jpg' />
 			</div>
-			<div id="/section-4/page-7" class="ft-page page-24 full-img" data-id="page-7">	
+			<div id="/section-4/page-7" class="ft-page page-24 full-img" data-id="page-7">
 				<h3 id="text-26" contenteditable="true">晚上小明会把小红送回家</h3>
 				<img src='img/iali32.jpg' />
 			</div>
@@ -237,7 +246,7 @@
 					<span id="text-59" contenteditable="true">小明好开心</span>
 					<span id="text-60" contenteditable="true">因为可以和小红</span>
 					<span id="text-61" contenteditable="true">去全世界好多地方玩</span></h3>
-				
+
 			</div>
 			<div id="/section-8/page-3" class="ft-page page-48 left-img" data-id="page-3">
 				<p><span id="text-62" contenteditable="true">小明也会继续努力</span><br /><span id="text-63" contenteditable="true">为了他和小红的梦之城堡</span></p>
@@ -284,11 +293,10 @@
 					<br />
 					<br />
 					<span> -- 按“Esc"键有惊喜</span>
-				</p>				
+				</p>
 			</div>
 		</div>
 	</div>
-	<div class="nojavascript">您的浏览器版本太低或禁用了javascript，无法正常浏览本页面</div>
 	<div class="write-tip">
 		<span class="showtip">小提示：点击文字可以进行编辑，点击右下角心形可以跳跃浏览</span>
 		<span style="display:none">小提示：编辑完成后点击保存修改，发送给你的亲亲开始表白吧</span>
@@ -297,8 +305,8 @@
 	<div class="write-ok">
 		<div class="write-box">
 			<h2>还差一步即可生成表白页面</h2>
-			<p id="write-mp3">自定义背景音乐：<span id="text-music" contenteditable="true">http://<?php echo $_SERVER['HTTP_HOST']; ?>/love/music/saveme</span><i></i>.mp3</p>
-			<p id="write-url">自定义表白链接：<u>http://<?php echo $_SERVER['HTTP_HOST']; ?>/love/2014/</u><span id="text-href" contenteditable="true"><?php echo time(); ?></span><i></i><u>.html</u></p>
+			<p id="write-mp3">自定义背景音乐：<span id="text-music" contenteditable="true"><?php echo $url.$_SERVER['HTTP_HOST']; ?>/love/music/saveme</span><i></i>.mp3</p>
+			<p id="write-url">自定义表白链接：<u><?php echo $url.$_SERVER['HTTP_HOST']; ?>/love/<?php echo date('Y', time()); ?>/</u><span id="text-href" contenteditable="true"><?php echo time(); ?></span><i></i><u>.html</u></p>
 			<p><small>自定义链接名只能为3-30位的字母[a-zA-Z]、数字[0-9]、- 和 _ </small></p>
 			<small><a href="###" id="back">重新修改</a></small> <button id="write-post">❤ 生成表白页面</button>
 			<div class="write-share">
@@ -309,10 +317,11 @@
 	</div>
 
 	<audio id="bgmMusic" src="music/saveme.mp3" autoplay="autoplay" loop preload="auto" type="audio/mp3"></audio>
-    
-	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
-	<script src="js/all.min.js"></script>
-	<script src="js/love.min.js"></script>
     <div class="mPower"><span id="on" title="点击暂停"></span><span id="off" title="点击播放"></span></div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/brav1toolbox.js"></script>
+	<script src="js/flowtime.js"></script>
+	<script src="js/love.js"></script>
 </body>
 </html>
