@@ -4,6 +4,8 @@ if (isset($_SERVER['HTTPS']) || '443' === $_SERVER['SERVER_PORT']) {
 } else {
     $url = 'http://';
 }
+$url = $url.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['DOCUMENT_URI']), '\\');
+$url = rtrim($url, '/');
 ?><!DOCTYPE HTML>
 <!--[if IE 6]>
 <html id="ie6" class="ie ie6 lt-ie9">
@@ -305,8 +307,8 @@ if (isset($_SERVER['HTTPS']) || '443' === $_SERVER['SERVER_PORT']) {
 	<div class="write-ok">
 		<div class="write-box">
 			<h2>还差一步即可生成表白页面</h2>
-			<p id="write-mp3">自定义背景音乐：<span id="text-music" contenteditable="true"><?php echo $url.$_SERVER['HTTP_HOST']; ?>/love/music/saveme</span><i></i>.mp3</p>
-			<p id="write-url">自定义表白链接：<u><?php echo $url.$_SERVER['HTTP_HOST']; ?>/love/<?php echo date('Y', time()); ?>/</u><span id="text-href" contenteditable="true"><?php echo time(); ?></span><i></i><u>.html</u></p>
+			<p id="write-mp3">自定义背景音乐：<span id="text-music" contenteditable="true"><?php echo $url ?>/music/saveme</span><i></i>.mp3</p>
+			<p id="write-url">自定义表白链接：<u><?php echo $url ?>/<?php echo date('Y', time()); ?>/</u><span id="text-href" contenteditable="true"><?php echo time(); ?></span><i></i><u>.html</u></p>
 			<p><small>自定义链接名只能为3-30位的字母[a-zA-Z]、数字[0-9]、- 和 _ </small></p>
 			<small><a href="###" id="back">重新修改</a></small> <button id="write-post">❤ 生成表白页面</button>
 			<div class="write-share">

@@ -9,7 +9,7 @@
 ##模版文件列表
 
 ```
-/2016
+/2017
 /css
   /css/all.css
 /fonts
@@ -31,7 +31,7 @@ loveNote.txt
 loveTpl.html
 ```
 
-`/2016` 用于存放生成的静态页面，若更改，请同时修改 `love.php` 里的路径
+`/2017` 用于存放生成的静态页面，若更改，请同时修改 `love.php` 里的路径
 `/js/love.min.js` 字段获取 JS 文件
 `love.php` 核心处理文件，`love.js` 传参给此文件处理并生成相应静态页面
 `loveNote.txt` 数据记录
