@@ -618,6 +618,9 @@ button {
     text-align: center;
     z-index: 2
 }
+.full-img .text .text {
+    position: relative;
+}
 .right-img {
     padding: 0;
     text-align: left
@@ -1032,6 +1035,7 @@ button {
     text-align: left
 }
 .page-49 img {
+    position: absolute;
     margin: 0
 }
 .page-50 {
