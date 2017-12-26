@@ -36,7 +36,7 @@ $(function() {
                 $("#write-mp3 i").text("←不能为空").fadeIn();
                 $("#text-music").focus();
                 setTimeout(function() { $("#write-mp3 i").fadeOut(); }, 3000);
-            } else if (!/^(http|https):\/\/+([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?$/.test(textMusic)) {
+            } else if (!/^https?:\/\/[^\s]+/.test(textMusic)) {
                 $("#write-mp3 i").text("←不允许的链接").fadeIn();
                 $("#text-music").focus();
                 setTimeout(function() { $("#write-mp3 i").fadeOut(); }, 3000);
