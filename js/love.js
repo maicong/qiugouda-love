@@ -7,7 +7,7 @@ Flowtime.showProgress(true);
 Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
 Flowtime.start();
 $(function() {
-    var docUrl = document.URL.substr(0, document.URL.indexOf('#'));
+    var docUrl = document.URL.split('#')[0];
     setInterval(function() {
         $(".showtip").removeClass("showtip").hide().siblings("span").addClass("showtip").fadeIn();
     }, 5000);
