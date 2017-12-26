@@ -51,8 +51,7 @@ if (isset($_GET['add']) && isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolowe
                 } else {
                     $url = 'http://';
                 }
-                $url         = $url.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['DOCUMENT_URI']), '\\');
-                $url         = rtrim($link_url, '/');
+                $url         = rtrim($url.$_SERVER['HTTP_HOST'].rtrim(dirname($_SERVER['DOCUMENT_URI']), '\\'), '/');
                 $url         = "{$url}/{$year}/{$textHref}.html";
                 $return      = array('status' => 1, 'url' => $url);
                 $path_status = '成功：生成';
